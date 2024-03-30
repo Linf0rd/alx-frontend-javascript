@@ -7,12 +7,17 @@ interface Teacher {
   [key: string]: any;
 }
 
-const teacher3: Teacher = {
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
-  fullTimeEmployee: false,
+  fullTimeEmployee: true,
   location: 'London',
-  contract: false,
+  numberOfReports: 17,
 };
 
-console.log(teacher3);
+console.log(director1);
+
